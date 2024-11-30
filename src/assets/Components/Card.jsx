@@ -1,26 +1,29 @@
-import React from 'react';
+import React from "react";
 import { SlPencil } from "react-icons/sl";
 
 function Card({ card }) {
   return (
     <div className="h-[95vh] w-full sm:w-[80%] md:w-[60%] lg:w-[40%] xl:w-[24vw] rounded-md p-3 bg-[#ffffff] border border-[#2532C0] shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out mx-2 sm:mx-4 mt-14 relative">
-      <div className="w-[50%] sm:w-[40%] md:w-[40%] lg:w-[10vw] mx-auto py-1 bg-orange-500 rounded-md text-white flex justify-center text-lg font-semibold" key={card.id}>
+      <div
+        className="w-[50%] sm:w-[40%] md:w-[40%] lg:w-[10vw] mx-auto py-1 bg-orange-500 rounded-md text-white flex justify-center text-lg font-semibold"
+        key={card.id}
+      >
         {card.title}
       </div>
-      <div className="w-[90%] sm:w-[80%] md:w-[80%] lg:w-[90%] overflow-hidden p-3 mx-auto mt-3">
-        <img
-          className="h-auto w-full rounded-md object-cover"
-          src={card.img}
-          alt=""
-        />
-      </div>
+      <div className="w-full p-3 mt-3 flex-grow flex items-center justify-center">
+  <img
+    className="max-w-full max-h-full object-contain rounded-md"
+    src={card.img}
+    alt=""
+  />
+</div>
 
       <div className="price grid justify-center p-2">
         <h1 className="text-2xl ml-1 font-semibold line-through leading-none">
-          ₹ {card.price} 
+          ₹ {card.price}
         </h1>
         <h1 className="text-3xl font-bold leading-none text-[#161ab2]">
-          ₹ {card.discounted} 
+          ₹ {card.discounted}
         </h1>
       </div>
 
@@ -31,7 +34,7 @@ function Card({ card }) {
       <div className="grid justify-center mt-4 font-semibold text-lg">
         Features Includes
       </div>
-      
+
       <div className="mt-2">
         <ul className="custom-list list-none text-black-700 text-sm p-4 space-y-3 font-sans">
           {card.features.map((data) => (
