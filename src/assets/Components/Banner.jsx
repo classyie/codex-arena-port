@@ -1,4 +1,3 @@
-i
 import coder1 from '../../assets/imgs/coder1.jpg'
 import coderr from '../../assets/imgs/coderr.png'
 import { useState } from "react";

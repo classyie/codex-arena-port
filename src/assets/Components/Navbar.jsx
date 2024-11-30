@@ -1,5 +1,5 @@
 import { useState } from "react";
-import codexImage from '../../assets/imgs/codex.svg'
+import logo  from "../imgs/logo.svg";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,11 +8,11 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-white relative border-gray-200" style={{ backgroundColor: '#1B1A1D' }}>
+      <nav className="bg-white relative border-gray-200" style={{ backgroundColor: '#F7F9F9' }}>
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
           <a className="flex items-center space-x-3 rtl:space-x-reverse" href="/">
-            {/* <img src="" className="h-8 rounded-lg" alt="Network Error" /> */}
-            <span className="self-center text-xl font-semibold whitespace-nowrap font-arkitech dark:text-white">
+            <img src={logo} className="h-8 rounded-lg" alt="Network Error" />
+            <span className="self-center text-2xl whitespace-nowrap font-arkitech dark:text-black font-extrabold">
               Codex Arena
             </span>
           </a>
@@ -52,8 +52,7 @@ function Navbar() {
             id="navbar-default"
           >
             <ul
-              className="flex flex-col p-4 mt-4 font-medium ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-gray-700"
-              style={{ backgroundColor: '#1B1A1D' }}
+              className="flex flex-col p-4 mt-4 font-medium ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F7F9F9] bg-[#F7F9F9]"
             >
               {menuss.map((data, index) => {
                 return (
@@ -77,8 +76,8 @@ function Navbar() {
             id="navbar-default-desktop"
           >
             <ul
-              className="flex flex-col p-4 mt-4 font-medium ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-gray-700"
-              style={{ backgroundColor: '#1B1A1D' }}
+              className="flex flex-col p-4 mt-4 font-medium ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F7F9F9] dark:border-gray-700"
+        
             >
               {menuss.map((data, index) => {
                 return (
