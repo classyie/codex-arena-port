@@ -1,8 +1,9 @@
+
 export const cards = [
     {
         id: 1,
         title: "Frontend Design",
-        img: "https://th.bing.com/th/id/OIP.name5NeZnnGz1qgybuOxmwHaDy?w=285&h=178&c=7&r=0&o=5&dpr=1.3&pid=1.7", // Replace with your image URL
+        img:  'assets/images/frontend.jpg', // Replace with your image URL
         price: "8,000",
         discounted: "6,999",
         features: [
@@ -20,7 +21,7 @@ export const cards = [
     {
         id: 2,
         title: "Backend Design",
-        img: "https://th.bing.com/th/id/OIP.name5NeZnnGz1qgybuOxmwHaDy?w=285&h=178&c=7&r=0&o=5&dpr=1.3&pid=1.7", // Replace with your image URL
+        img: "assets/images/frontend.jpg", // Replace with your image URL
         price: "12,000",
         discounted: "10,999",
         features: [
@@ -37,7 +38,7 @@ export const cards = [
     {
         id: 3,
         title: "Full Stack Design",
-        img: "https://th.bing.com/th/id/OIP.name5NeZnnGz1qgybuOxmwHaDy?w=285&h=178&c=7&r=0&o=5&dpr=1.3&pid=1.7", // Replace with your image URL
+        img: "assets/images/frontend.jpg", // Replace with your image URL
         price: "18,000",
         discounted: "15,999",
         features: [

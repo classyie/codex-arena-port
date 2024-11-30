@@ -5,7 +5,7 @@ function ServicesCards() {
   return (
     <div className="flex flex-wrap items-center justify-center bg-[#F8F9FA] ">
       {cards.map((data) => (
-        <Card card={data} />
+        <Card card={data} key={data.id} />
       ))}
     </div>
   );
