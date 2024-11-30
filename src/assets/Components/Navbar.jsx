@@ -1,16 +1,30 @@
 import { useState } from "react";
-import logo  from "../imgs/logo.svg";
+import logo from "../imgs/logo.svg";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuss = ["Home", "About us", "Services", "Our Projects", "Articles", "Contact us", "Support"];
+  const menuss = [
+    "Home",
+    "About us",
+    "Services",
+    "Our Projects",
+    "Articles",
+    "Contact us",
+    "Support",
+  ];
 
   return (
     <>
-      <nav className="bg-white relative border-gray-200" style={{ backgroundColor: '#F7F9F9' }}>
+      <nav
+        className="bg-white border-gray-200 sticky top-0 z-50"
+        style={{ backgroundColor: "#F7F9F9" }}
+      >
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
-          <a className="flex items-center space-x-3 rtl:space-x-reverse" href="/">
+          <a
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+            href="/"
+          >
             <img src={logo} className="h-8 rounded-lg" alt="Network Error" />
             <span className="self-center text-2xl whitespace-nowrap font-arkitech dark:text-black font-extrabold">
               Codex Arena
@@ -19,7 +33,7 @@ function Navbar() {
           <button
             className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
             aria-controls="navbar-default"
-            style={{ backgroundColor: '#1B1A1D' }}
+            style={{ backgroundColor: "#1B1A1D" }}
             aria-expanded={isMenuOpen}
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -51,9 +65,7 @@ function Navbar() {
             }`}
             id="navbar-default"
           >
-            <ul
-              className="flex flex-col p-4 mt-4 font-medium ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F7F9F9] bg-[#F7F9F9]"
-            >
+            <ul className="flex flex-col p-4 mt-4 font-medium ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F7F9F9] bg-[#F7F9F9]">
               {menuss.map((data, index) => {
                 return (
                   <li key={index}>
@@ -71,14 +83,8 @@ function Navbar() {
           </div>
 
           {/* Desktop Navbar */}
-          <div
-            className="hidden md:flex md:w-auto"
-            id="navbar-default-desktop"
-          >
-            <ul
-              className="flex flex-col p-4 mt-4 font-medium ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F7F9F9] dark:border-gray-700"
-        
-            >
+          <div className="hidden md:flex md:w-auto" id="navbar-default-desktop">
+            <ul className="flex flex-col p-4 mt-4 font-medium ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-[#F7F9F9] dark:border-gray-700">
               {menuss.map((data, index) => {
                 return (
                   <li key={index}>
