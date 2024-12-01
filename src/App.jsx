@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./assets/Components/footer";
+import Footer from "./assets/Components/Footer";
 import Banner from "./assets/Components/Banner";
 import SubmitForm from "./assets/Components/submitForm";
 import Navbar from "./assets/Components/Navbar";
