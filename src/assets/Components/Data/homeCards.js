@@ -4,8 +4,8 @@ export const cards = [
         id: 1,
         title: "Frontend Design",
         img:  'assets/images/frontend.jpg', // Replace with your image URL
-        price: "8,000",
-        discounted: "6,999",
+        // price: ,
+        price: "4,499 - 24,499",
         features: [
             "Responsive Design",
             "Custom UI/UX",
@@ -22,8 +22,8 @@ export const cards = [
         id: 2,
         title: "Backend Design",
         img: "assets/images/Backend.png", // Replace with your image URL
-        price: "12,000",
-        discounted: "10,999",
+        // price:,
+        price:  "4999-24,499",
         features: [
             "Database Setup (MongoDB, PostgreSQL, MySQL)",
             "API Development (RESTful)",
@@ -39,8 +39,8 @@ export const cards = [
         id: 3,
         title: "Full Stack Design",
         img: 'assets/images/fullstack.jpg', // Replace with your image URL
-        price: "18,000",
-        discounted: "15,999",
+        // price: ,
+        price: "11,999 - 49,999",
         features: [
             "Frontend Technologies: HTML5, CSS3, JavaScript, React.js, JSX",
             "Responsive Design with Bootstrap and Tailwind CSS",
@@ -59,8 +59,8 @@ export const cards = [
         id: 4,
         title: "Digital Marketing",
         img: "assets/images/digitalMarketing.png", // Replace with your image URL
-        price: "20,000",
-        discounted: "18,000",
+        // price: ,
+        price: "9,999 - 29,999",
         features: [
           "Social Media Marketing (Facebook, Instagram, LinkedIn, Twitter)",
           "Paid Search Ads (Google Ads, Bing Ads)",

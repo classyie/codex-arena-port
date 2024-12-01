@@ -19,11 +19,11 @@ function Card({ card }) {
       </div>
 
       <div className="price grid justify-center p-2">
-        <h1 className="text-2xl ml-1 font-semibold line-through leading-none">
+        {/* <h1 className="text-2xl ml-1 font-semibold line-through leading-none">
           ₹ {card.price}
-        </h1>
+        </h1> */}
         <h1 className="text-3xl font-bold leading-none text-[#161ab2]">
-          ₹ {card.discounted}
+          ₹ {card.price}
         </h1>
       </div>
 
