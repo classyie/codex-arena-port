@@ -58,7 +58,7 @@ export const cards = [
     {
         id: 4,
         title: "Digital Marketing",
-        img: "assets/images/digitalMarketing.jpeg", // Replace with your image URL
+        img: "assets/images/digitalMarketing.png", // Replace with your image URL
         price: "20,000",
         discounted: "18,000",
         features: [
