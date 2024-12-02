@@ -4,7 +4,7 @@ import { HashLink } from 'react-router-hash-link'; // Import HashLink
 
 const About = () => {
   return (
-    <section className="h-[93vh] bg-[#F8F9FA] text-black py-16 px-6 ">
+    <section className="scroll-animate h-[93vh] bg-[#F8F9FA] text-black py-16 px-6 ">
       <div className="container mx-auto flex flex-col lg:flex-row items-center h-full">
         {/* Text Section */}
         <div className="lg:w-1/2 flex flex-col justify-center ">

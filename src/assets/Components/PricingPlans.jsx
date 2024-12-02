@@ -34,7 +34,7 @@ const PricingPlans = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-10 px-6">
+    <div className="flex flex-col items-center min-h-screen px-6 py-6 scroll-animate bg-gray-50">
       <h1 className="text-5xl font-extrabold text-gray-800 mb-10">
         Our Pricing Plans
       </h1>

@@ -6,6 +6,8 @@ import Navbar from "./assets/Components/Navbar";
 import ServicesCards from "./assets/Components/ServicesCards";
 import About from "./assets/Components/About";
 import NoPage from "./assets/Components/NoPage";
+import PricingPlans from "./assets/Components/PricingPlans";
+import Ourteam from "./assets/Components/Ourteam";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 function App() {
@@ -30,6 +32,22 @@ function App() {
             element={
               <>
                 <About />
+              </>
+            }
+          />
+          <Route
+            path="/team"
+            element={
+              <>
+                <Ourteam />
+              </>
+            }
+          />
+          <Route
+            path="/plans"
+            element={
+              <>
+                <PricingPlans />
               </>
             }
           />

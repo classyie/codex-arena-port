@@ -1,16 +1,30 @@
 import Teammmember from './Teammember';
-import  '../css/animation.css'
+import '../css/animation.css';
 import { initScrollAnimations } from '../js/scrollAnimation';
 import { useEffect } from 'react';
 
 const Ourteam = () => {
   useEffect(() => {
+    // Initialize scroll animations
     initScrollAnimations();
+
+    // Adjust navbar style dynamically for this component
+    const navbar = document.querySelector('nav');
+    if (navbar) {
+      navbar.style.backgroundColor = '#'; // Replace with the desired navbar background color
+    }
+
+    // Cleanup or reset styles when leaving this page
+    return () => {
+      if (navbar) {
+        navbar.style.backgroundColor = ''; // Reset to default or original background
+      }
+    };
   }, []);
+
   const users = [
     {
-      profileImage:
-        'src/assets/imgs/tarun1.mp4',
+      profileImage: 'src/assets/imgs/tarun1.mp4',
       name: 'Parth Upadhyay',
       role: 'Front-end Developer',
       tags: [
@@ -22,8 +36,7 @@ const Ourteam = () => {
       profileLink: '#',
     },
     {
-      profileImage:
-        'src/assets/imgs/10.mp4',
+      profileImage: 'src/assets/imgs/10.mp4',
       name: 'Tarun Vaishnav',
       role: 'Back-end Developer',
       tags: [
@@ -35,8 +48,7 @@ const Ourteam = () => {
       profileLink: '#',
     },
     {
-      profileImage:
-        'src/assets/imgs/21.mp4',
+      profileImage: 'src/assets/imgs/21.mp4',
       name: 'Harshit Pandey',
       role: 'Fullstack Developer',
       tags: [
@@ -50,27 +62,26 @@ const Ourteam = () => {
   ];
 
   return (
-    <div className='scroll-animate'>
-    <h1
-      className="flex mt-10 items-center justify-center h-12 text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center"
-      style={{ fontFamily: 'Parkinsans, sans-serif' }}
-    >
-      Our Team Members
-    </h1>
+    <div className="ourteam-wrapper scroll-animate">
+      <h1
+        className="flex mt-10 items-center justify-center h-12 text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center"
+        style={{ fontFamily: 'Parkinsans, sans-serif' }}
+      >
+        Our Team Members
+      </h1>
 
-    <div className="grid grid-cols-1 gap-6 mt-10 mb-5 sm:grid-cols-2 lg:grid-cols-3">
-      
-      {users.map((user, index) => (
-        <Teammmember
-          key={index}
-          profileImage={user.profileImage}
-          name={user.name}
-          role={user.role}
-          tags={user.tags}
-          profileLink={user.profileLink}
-        />
-      ))}
-    </div>
+      <div className="grid grid-cols-1 gap-6 mt-10 mb-5 sm:grid-cols-2 lg:grid-cols-3">
+        {users.map((user, index) => (
+          <Teammmember
+            key={index}
+            profileImage={user.profileImage}
+            name={user.name}
+            role={user.role}
+            tags={user.tags}
+            profileLink={user.profileLink}
+          />
+        ))}
+      </div>
     </div>
   );
 };

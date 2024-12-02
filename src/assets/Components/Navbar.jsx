@@ -97,7 +97,9 @@ function Navbar() {
         </div>
 
         {/* Desktop Navbar */}
-        <div className="hidden md:flex md:w-auto">
+        <div className="flex md:w-auto">
+          {" "}
+          {/* Remove 'hidden' class */}
           <ul className="flex flex-row p-0 mt-0 font-medium space-x-8 text-black bg-[#F7F9F9]">
             {navItems.map((item) => (
               <li key={item.path}>
@@ -114,7 +116,9 @@ function Navbar() {
                     to={item.path}
                     className={({ isActive }) =>
                       `px-3 py-2 text-black rounded ${
-                        isActive ? "text-blue-700 font-bold" : "hover:bg-gray-200"
+                        isActive
+                          ? "text-blue-700 font-bold"
+                          : "hover:bg-gray-200"
                       }`
                     }
                   >

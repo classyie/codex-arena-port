@@ -1,7 +1,6 @@
 import React from "react";
 import { SlPencil } from "react-icons/sl";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 function Card({ card }) {
   return (
