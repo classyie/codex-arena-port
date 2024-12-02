@@ -16,12 +16,8 @@ function Card({ card }) {
     >
       {/* Card Title */}
       <motion.div
-className="w-[60%] sm:w-[50%] md:w-[40%] lg:w-[18vw] mx-auto py-2 px-4 rounded-md text-black flex justify-center text-3xl sm:text-2xl font-extrabold truncate"
-
-
-
-
-whileHover={{ scale: 1.1 }}
+        className="w-[60%] sm:w-[50%] md:w-[40%] lg:w-[18vw] mx-auto py-2 px-4 rounded-md text-black flex justify-center text-3xl sm:text-2xl font-extrabold truncate"
+        whileHover={{ scale: 1.1 }}
         key={card.id}
       >
         {card.title}
@@ -70,7 +66,7 @@ whileHover={{ scale: 1.1 }}
         className="absolute bottom-6 w-full flex justify-center"
         whileHover={{ scale: 1.1 }}
       >
-        <button className="px-4 rounded-md py-2 font-semibold text-sm bg-[#FFB649] hover:bg-[#FF9930] transition-colors">
+        <button className="px-4 rounded-md py-2 font-semibold text-sm text-white bg-indigo-500 hover:bg-indigo-700 transition-colors">
           KNOW MORE
         </button>
       </motion.div>

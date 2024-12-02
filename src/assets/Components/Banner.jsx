@@ -30,7 +30,7 @@ const Banner = () => {
             BUILDING <font color="orange">SOMETHING</font> IS BETTER THAN{" "}
             <font color="orange">DOING</font> NOTHING
           </p>
-          <button className="px-6 py-3 text-white transition bg-[#566FFF] rounded-lg shadow-lg hover:bg-blue-700">
+          <button className="px-6 py-3 text-white transition bg-indigo-500 hover:bg-indigo-700 rounded-lg shadow-lg">
             Visit us
           </button>
         </div>
