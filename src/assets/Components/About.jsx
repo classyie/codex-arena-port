@@ -24,7 +24,7 @@ const About = () => {
           {/* Learn More Button */}
           <HashLink smooth to="/#ContactUs">
             <button className="bg-indigo-500 hover:bg-indigo-700 text-white py-3 px-8 rounded-lg shadow-md transform hover:scale-105 transition-all mt-4">
-              Learn More
+              Connect With Us
             </button>
           </HashLink>
         </div>
