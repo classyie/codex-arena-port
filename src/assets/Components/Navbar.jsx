@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link"; // Import HashLink
 import logo from "../imgs/logo.svg";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isWideScreen, setIsWideScreen] = useState(true); // State to track window size
 
   const handleLinkClick = () => {
     setIsMenuOpen(false); // Close the mobile menu
@@ -17,6 +18,22 @@ function Navbar() {
     { path: "/#ContactUs", label: "Contact us", isHashLink: true },
     { path: "/team", label: "Our Team!" },
   ];
+
+  // Detect screen size and set the mobile flag
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth > 764); // Check if window width is more than 764px
+    };
+
+    // Check on initial render
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <nav
@@ -96,39 +113,39 @@ function Navbar() {
           </ul>
         </div>
 
-        {/* Desktop Navbar */}
-        <div className="flex md:w-auto">
-          {" "}
-          {/* Remove 'hidden' class */}
-          <ul className="flex flex-row p-0 mt-0 font-medium space-x-8 text-black bg-[#F7F9F9]">
-            {navItems.map((item) => (
-              <li key={item.path}>
-                {item.isHashLink ? (
-                  <HashLink
-                    smooth
-                    to={item.path}
-                    className="px-3 py-2 text-black rounded hover:bg-gray-200"
-                  >
-                    {item.label}
-                  </HashLink>
-                ) : (
-                  <NavLink
-                    to={item.path}
-                    className={({ isActive }) =>
-                      `px-3 py-2 text-black rounded ${
-                        isActive
-                          ? "text-blue-700 font-bold"
-                          : "hover:bg-gray-200"
-                      }`
-                    }
-                  >
-                    {item.label}
-                  </NavLink>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Desktop Navbar (only visible if screen width > 764px) */}
+        {isWideScreen && (
+          <div className="flex">
+            <ul className="flex flex-row p-0 mt-0 font-medium space-x-8 text-black bg-[#F7F9F9]">
+              {navItems.map((item) => (
+                <li key={item.path}>
+                  {item.isHashLink ? (
+                    <HashLink
+                      smooth
+                      to={item.path}
+                      className="px-3 py-2 text-black rounded hover:bg-gray-200"
+                    >
+                      {item.label}
+                    </HashLink>
+                  ) : (
+                    <NavLink
+                      to={item.path}
+                      className={({ isActive }) =>
+                        `px-3 py-2 text-black rounded ${
+                          isActive
+                            ? "text-blue-700 font-bold"
+                            : "hover:bg-gray-200"
+                        }`
+                      }
+                    >
+                      {item.label}
+                    </NavLink>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );
