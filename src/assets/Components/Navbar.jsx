@@ -119,6 +119,7 @@ function Navbar() {
                     }
                   >
                     {item.label}
+                    
                   </NavLink>
                 )}
               </li>
