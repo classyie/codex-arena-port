@@ -1,7 +1,6 @@
 import React from "react";
 import { SlPencil } from "react-icons/sl";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 function Card({ card }) {
   return (
@@ -26,7 +25,7 @@ function Card({ card }) {
 
       {/* Image Section */}
       <motion.div
-        className="flex items-center justify-center flex-grow w-full h-auto p-3 mt-3"
+        className="w-full h-auto p-3 mt-3 flex-grow flex items-center justify-center"
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3 }}
       >
@@ -38,22 +37,22 @@ function Card({ card }) {
       </motion.div>
 
       {/* Price Section */}
-      <div className="grid justify-center p-2 price">
+      <div className="price grid justify-center p-2">
         <h1 className="text-3xl font-bold leading-none text-[#161ab2]">
           ₹ {card.price}
         </h1>
       </div>
 
       {/* Features Section */}
-      <div className="grid justify-center mt-4 text-lg font-semibold">
+      <div className="grid justify-center mt-4 font-semibold text-lg">
         Features Includes
       </div>
 
       <div className="mt-2">
-        <ul className="p-4 space-y-3 font-sans text-sm list-none custom-list text-black-700">
+        <ul className="custom-list list-none text-black-700 text-sm p-4 space-y-3 font-sans">
           {card.features.map((data) => (
             <li
-              className="flex items-center overflow-hidden truncate custom-list text-ellipsis"
+              className="custom-list flex items-center truncate overflow-hidden text-ellipsis"
               key={data}
             >
               <SlPencil className="mr-2 text-blue-500" /> {data}
@@ -64,12 +63,12 @@ function Card({ card }) {
 
       {/* Button Section */}
       <motion.div
-        className="absolute flex justify-center w-full bottom-6"
+        className="absolute bottom-6 w-full flex justify-center"
         whileHover={{ scale: 1.1 }}
       >
-        <Link to="/plans"><button className="px-4 py-2 text-sm font-semibold text-white transition-colors bg-indigo-500 rounded-md hover:bg-indigo-700">
+        <button className="px-4 rounded-md py-2 font-semibold text-sm text-white bg-indigo-500 hover:bg-indigo-700 transition-colors">
           KNOW MORE
-        </button></Link>
+        </button>
       </motion.div>
     </motion.div>
   );
