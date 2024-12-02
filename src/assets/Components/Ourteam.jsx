@@ -1,63 +1,61 @@
-import Teammmember from './Teammember';
-import '../css/animation.css';
-import { initScrollAnimations } from '../js/scrollAnimation';
-import { useEffect } from 'react';
+import Teammmember from "./Teammember";
+import "../css/animation.css";
+import { initScrollAnimations } from "../js/scrollAnimation";
+import { useEffect } from "react";
 
 const Ourteam = () => {
   useEffect(() => {
-    // Initialize scroll animations
     initScrollAnimations();
 
-    // Adjust navbar style dynamically for this component
-    const navbar = document.querySelector('nav');
+    const navbar = document.querySelector("nav");
     if (navbar) {
-      navbar.style.backgroundColor = '#'; // Replace with the desired navbar background color
+      navbar.style.backgroundColor = "#F7F9F9";
     }
 
     // Cleanup or reset styles when leaving this page
     return () => {
       if (navbar) {
-        navbar.style.backgroundColor = ''; // Reset to default or original background
+        navbar.style.backgroundColor = "#F7F9F9"; // Reset to default or original background
       }
     };
   }, []);
 
   const users = [
     {
-      profileImage: 'src/assets/imgs/tarun1.mp4',
-      name: 'Parth Upadhyay',
-      role: 'Front-end Developer',
+      profileImage: "src/assets/imgs/tarun1.mp4",
+      name: "Parth Upadhyay",
+      role: "Front-end Developer",
       tags: [
-        { label: 'Three JS', color: 'text-teal-900 bg-teal-200' },
-        { label: 'React JS', color: 'text-indigo-900 bg-indigo-200' },
-        { label: 'Tailwind', color: 'text-purple-900 bg-purple-200' },
-        { label: 'GSAP', color: 'text-red-900 bg-red-200' },
+        { label: "Three JS", color: "text-teal-900 bg-teal-200" },
+        { label: "React JS", color: "text-indigo-900 bg-indigo-200" },
+        { label: "Tailwind", color: "text-purple-900 bg-purple-200" },
+        { label: "GSAP", color: "text-red-900 bg-red-200" },
       ],
-      profileLink: '#',
+      profileLink: "#",
     },
     {
-      profileImage: 'src/assets/imgs/10.mp4',
-      name: 'Tarun Vaishnav',
-      role: 'Back-end Developer',
+      profileImage: "src/assets/imgs/10.mp4",
+      name: "Tarun Vaishnav",
+      role: "Back-end Developer",
       tags: [
-        { label: 'Node JS', color: 'text-teal-900 bg-teal-200' },
-        { label: 'MySQL', color: 'text-indigo-900 bg-indigo-200' },
-        { label: 'Python-DJango', color: 'text-purple-900 bg-purple-200' },
-        { label: 'Express', color: 'text-green-900 bg-green-200' },
+        { label: "Node JS", color: "text-teal-900 bg-teal-200" },
+        { label: "MySQL", color: "text-indigo-900 bg-indigo-200" },
+        { label: "Python-DJango", color: "text-purple-900 bg-purple-200" },
+        { label: "Express", color: "text-green-900 bg-green-200" },
       ],
-      profileLink: '#',
+      profileLink: "#",
     },
     {
-      profileImage: 'src/assets/imgs/21.mp4',
-      name: 'Harshit Pandey',
-      role: 'Fullstack Developer',
+      profileImage: "src/assets/imgs/21.mp4",
+      name: "Harshit Pandey",
+      role: "Fullstack Developer",
       tags: [
-        { label: 'Node JS', color: 'text-teal-900 bg-teal-200' },
-        { label: 'MySQL', color: 'text-indigo-900 bg-indigo-200' },
-        { label: 'Version Control', color: 'text-purple-900 bg-purple-200' },
-        { label: 'Server Management', color: 'text-orange-900 bg-orange-200' },
+        { label: "Node JS", color: "text-teal-900 bg-teal-200" },
+        { label: "MySQL", color: "text-indigo-900 bg-indigo-200" },
+        { label: "Version Control", color: "text-purple-900 bg-purple-200" },
+        { label: "Server Management", color: "text-orange-900 bg-orange-200" },
       ],
-      profileLink: '#',
+      profileLink: "#",
     },
   ];
 
@@ -65,7 +63,7 @@ const Ourteam = () => {
     <div className="ourteam-wrapper scroll-animate">
       <h1
         className="flex mt-10 items-center justify-center h-12 text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center"
-        style={{ fontFamily: 'Parkinsans, sans-serif' }}
+        style={{ fontFamily: "Parkinsans, sans-serif" }}
       >
         Our Team Members
       </h1>
