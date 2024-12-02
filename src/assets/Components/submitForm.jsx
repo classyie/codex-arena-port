@@ -43,7 +43,7 @@ const QueryForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F9FA] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-[#F8F9FA] flex items-center justify-center px-4" id="ContactUs">
       <div className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg w-full max-w-6xl p-8 gap-8">
         {/* Form Section */}
         <div className="w-full md:w-3/5">

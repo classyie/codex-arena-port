@@ -1,5 +1,4 @@
 import React from "react";
-import bannerr from "../imgs/bannerr.jpg";
 import codexsvg from "../imgs/codex.svg";
 
 function Footer() {
