@@ -1,7 +1,13 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
+import  '../css/animation.css'
+import { initScrollAnimations } from '../js/scrollAnimation';
+import { useEffect } from 'react';
 
 const PricingPlans = () => {
+  useEffect(() => {
+    initScrollAnimations();
+  }, []);
   const plans = [
     {
       title: "Web Page Design - Starter Plan",
@@ -34,15 +40,16 @@ const PricingPlans = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-10 px-6">
-      <h1 className="text-5xl font-extrabold text-gray-800 mb-10">
-        Our Pricing Plans
-      </h1>
-      <p className="text-lg text-gray-600 mb-12 max-w-2xl text-center">
+    <div className="flex flex-col items-center min-h-screen px-6 py-6 scroll-animate bg-gray-50">
+      <h1
+        className="flex items-center justify-center h-12 mt-2 text-3xl text-center md:text-4xl lg:text-5xl xl:text-6xl"
+        style={{ fontFamily: 'Parkinsans, sans-serif' }}
+      >Our Pricing Plans</h1>
+      <p className="max-w-2xl mt-5 text-lg text-center text-gray-600">
         Choose the plan that fits your needs. Get high-quality web page designs
         with professional features at competitive prices.
       </p>
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl">
+      <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl">
         {plans.map((plan, index) => (
           <Tilt
             key={index}
@@ -50,16 +57,16 @@ const PricingPlans = () => {
             tiltMaxAngleY={10}
             scale={1.05}
             transitionSpeed={400}
-            className="rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-300"
+            className="transition-all duration-300 transform shadow-lg rounded-xl hover:shadow-2xl"
           >
             <div
               className={`rounded-xl p-8 text-center ${plan.bgColor} border-t-4 border-indigo-500 flex flex-col justify-between h-full`}
             >
               <div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-3">
+                <h2 className="mb-3 text-2xl font-bold text-gray-800">
                   {plan.title}
                 </h2>
-                <p className="text-sm italic text-gray-500 mb-4">{plan.tagline}</p>
+                <p className="mb-4 text-sm italic text-gray-500">{plan.tagline}</p>
                 <div className="mb-6">
                   <p className="text-xl font-semibold text-gray-600 line-through">
                     ₹{plan.price}
@@ -68,11 +75,11 @@ const PricingPlans = () => {
                     ₹{plan.discountedPrice}
                   </p>
                 </div>
-                <ul className="space-y-3 mb-6 text-gray-700">
+                <ul className="mb-6 space-y-3 text-gray-700">
                   {plan.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-center gap-2 justify-center"
+                      className="flex items-center justify-center gap-2"
                     >
                       <span className="w-2 h-2 bg-indigo-500 rounded-full"></span>
                       {feature}
@@ -80,7 +87,7 @@ const PricingPlans = () => {
                   ))}
                 </ul>
               </div>
-              <button className="mt-auto w-full bg-indigo-600 text-white py-2 rounded-full font-medium hover:bg-indigo-700 transition-all">
+              <button className="w-full py-2 font-medium text-white transition-all bg-indigo-600 rounded-full hover:bg-indigo-700">
                 Choose Plan
               </button>
             </div>

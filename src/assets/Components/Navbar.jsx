@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <nav
-      className="sticky top-0 z-50 bg-white border-gray-200"
+      className="sticky top-0 z-50 text-black border-gray-200 hover:text-gray-500"
       style={{ backgroundColor: "#F7F9F9" }}
     >
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
@@ -74,7 +74,7 @@ function Navbar() {
                     smooth
                     to={item.path}
                     onClick={handleLinkClick}
-                    className="block px-3 py-2 text-black rounded hover:bg-gray-200"
+                    className="block px-3 py-2 text-black rounded"
                   >
                     {item.label}
                   </HashLink>
@@ -97,7 +97,9 @@ function Navbar() {
         </div>
 
         {/* Desktop Navbar */}
-        <div className="hidden md:flex md:w-auto">
+        <div
+          className={`hidden lg:block xl:block md:flex md:w-auto`}
+        >
           <ul className="flex flex-row p-0 mt-0 font-medium space-x-8 text-black bg-[#F7F9F9]">
             {navItems.map((item) => (
               <li key={item.path}>

@@ -1,10 +1,15 @@
 import coder1 from "../../assets/imgs/coder1.jpg";
 import coderr from "../../assets/imgs/coderr.png";
 import { useState } from "react";
+import  '../css/animation.css'
+import { initScrollAnimations } from '../js/scrollAnimation';
+import { useEffect } from 'react';
 
 const Banner = () => {
   const [transformStyle, setTransformStyle] = useState({});
-
+  useEffect(() => {
+    initScrollAnimations();
+  }, []);
   const handleMouseMove = (e) => {
     const { clientX: mouseX, clientY: mouseY } = e;
     const { offsetWidth: width, offsetHeight: height } = e.currentTarget;
@@ -18,19 +23,19 @@ const Banner = () => {
 
   return (
     <div
-      className="relative w-full h-[700px] md:h-[600px] lg:h-[700px] overflow-hidden bg-[#F8F9FA]"
+      className="relative scroll-animate w-full h-[700px] md:h-[600px] lg:h-[700px] overflow-hidden bg-[#F8F9FA]"
       onMouseMove={handleMouseMove}
     >
       <div className="absolute inset-0 items-center bg-[#F8F9FA] bg-opacity-50 md:flex justify-evenly">
         <div className="items-start px-4 mt-20 space-y-4 text-center text-black">
-          <h1 className="text-7xl font-bold md:text-6xl lg:text-8xl">
+          <h1 className="font-bold text-7xl md:text-6xl lg:text-8xl">
             We Are Code<span className="text-[#08006E]">X</span>
           </h1>
           <p className="text-sm md:text-lg">
             BUILDING <font color="orange">SOMETHING</font> IS BETTER THAN{" "}
             <font color="orange">DOING</font> NOTHING
           </p>
-          <button className="px-6 py-3 text-white transition bg-indigo-500 hover:bg-indigo-700 rounded-lg shadow-lg">
+          <button className="px-6 py-3 text-white transition bg-indigo-500 rounded-lg shadow-lg hover:bg-indigo-700">
             Visit us
           </button>
         </div>

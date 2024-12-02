@@ -1,0 +1,25 @@
+/* Global animations.css file */
+
+/* Define the keyframes for the appearing animation */
+@keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Reusable class for the animation */
+  .appear-animation {
+    animation: appear 2s ease-out forwards;
+    opacity: 0; /* Ensure the element is hidden until animated */
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
