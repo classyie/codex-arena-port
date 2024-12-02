@@ -6,7 +6,9 @@ import Navbar from "./assets/Components/Navbar";
 import ServicesCards from "./assets/Components/ServicesCards";
 import About from "./assets/Components/About";
 import NoPage from "./assets/Components/NoPage";
+import Ourteam from "./assets/Components/Ourteam";
 import { BrowserRouter, Routes, Route } from "react-router";
+import PricingPlans from "./assets/Components/PricingPlans";
 
 function App() {
   return (
@@ -34,10 +36,18 @@ function App() {
             }
           />
           <Route
-            path="*"
+            path="/team"
             element={
               <>
-                <NoPage />
+                <Ourteam />
+              </>
+            }
+          />
+          <Route
+            path="/plans"
+            element={
+              <>
+                <PricingPlans />
               </>
             }
           />
