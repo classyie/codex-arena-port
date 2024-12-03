@@ -40,7 +40,7 @@ const FrontendPP = () => {
   };
 
   return (
-    <div className="flex flex-col items-center h-[80vh] px-6 py-6 scroll-animate bg-gray-50xs:px-10">
+    <div className="flex flex-col items-center h-[80vh] px-6 py-6 scroll-animate bg-gray-50 xs:px-10">
       <h1 className="text-5xl font-extrabold text-gray-800 mb-10 lg:pt-20">
         Our Pricing Plans
       </h1>

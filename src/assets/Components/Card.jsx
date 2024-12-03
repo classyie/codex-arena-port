@@ -21,7 +21,7 @@ function Card({ card }) {
 
   return (
     <motion.div
-      className="h-[120vh] w-full sm:w-[80%] md:w-[60%] lg:w-[40%] xl:w-[24vw] rounded-md p-3 bg-[#ffffff] border border-[#2532C0] shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out mx-2 sm:mx-4 mt-14 relative overflow-hidden"
+      className="h-[120vh] w-full xs:px-10 md:w-[60%] lg:w-[40%] xl:w-[24vw] rounded-md p-3 bg-[#ffffff] border border-[#2532C0] shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out mx-2 sm:mx-4 mt-14 relative overflow-hidden"
       whileHover={{
         scale: 1.05,
         boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
