@@ -1,136 +1,151 @@
-export const cardData = [
-    {
-      "title": "Web Page Design - Starter Plan",
-      "features": [
-        "Single-page design",
-        "Responsive layout",
-        "Basic SEO"
-      ],
-      "price": 5000,
-      "discountedPrice": 4500,
-      "tagline": "Perfect for personal projects!"
-    },
-    {
-      "title": "Web Page Design - Pro Plan",
-      "features": [
-        "Up to 5 pages",
-        "Custom design",
-        "Advanced SEO optimization"
-      ],
-      "price": 10000,
-      "discountedPrice": 9000,
-      "tagline": "Ideal for small businesses!"
-    },
-    {
-      "title": "Web Page Design - Enterprise Plan",
-      "features": [
-        "Unlimited pages",
-        "Premium designs with animations",
-        "Full SEO and analytics integration"
-      ],
-      "price": 25000,
-      "discountedPrice": 22500,
-      "tagline": "Comprehensive design for enterprises!"
-    },
-    {
-      "title": "Frontend Development - Basic",
-      "features": [
-        "Static pages",
-        "HTML5, CSS3, and JavaScript"
-      ],
-      "price": 7000,
-      "discountedPrice": 6300,
-      "tagline": "Simple and effective!"
-    },
-    {
-      "title": "Frontend Development - Advanced",
-      "features": [
-        "Dynamic React.js interfaces",
-        "API integration"
-      ],
-      "price": 15000,
-      "discountedPrice": 13500,
-      "tagline": "For interactive user experiences!"
-    },
-    {
-      "title": "Frontend Development - Premium",
-      "features": [
-        "Complete frontend setup",
-        "Animations and interactive elements"
-      ],
-      "price": 30000,
-      "discountedPrice": 27000,
-      "tagline": "Top-tier solutions for demanding needs!"
-    },
-    {
-      "title": "Backend Development - Essential",
-      "features": [
-        "Database setup (MongoDB or MySQL)",
-        "Basic API creation"
-      ],
-      "price": 10000,
-      "discountedPrice": 9000,
-      "tagline": "Start your backend journey!"
-    },
-    {
-      "title": "Backend Development - Professional",
-      "features": [
-        "RESTful APIs",
-        "Authentication systems"
-      ],
-      "price": 20000,
-      "discountedPrice": 18000,
-      "tagline": "Secure and robust backend!"
-    },
-    {
-      "title": "Backend Development - Custom",
-      "features": [
-        "Complex systems (e.g., payment gateways, admin dashboards)",
-        "Scalable and secure architecture"
-      ],
-      "price": "Starting at 30000",
-      "discountedPrice": "Contact for custom pricing",
-      "tagline": "Tailored solutions for your needs!"
-    },
-    {
-      "title": "MERN Stack Development - Startup Package",
-      "features": [
-        "Basic full-stack application",
-        "MongoDB, Express.js, React.js, Node.js"
-      ],
-      "price": 25000,
-      "discountedPrice": 22500,
-      "tagline": "Get started with full-stack!"
-    },
-    {
-      "title": "MERN Stack Development - Business Package",
-      "features": [
-        "Advanced features like real-time updates",
-        "Admin panels and dashboards"
-      ],
-      "price": 50000,
-      "discountedPrice": 45000,
-      "tagline": "Boost your business with advanced tools!"
-    },
-    {
-      "title": "MERN Stack Development - Enterprise Package",
-      "features": [
-        "High-performance, scalable applications",
-        "Comprehensive testing and deployment"
-      ],
-      "price": 100000,
-      "discountedPrice": 90000,
-      "tagline": "Enterprise-grade applications!"
-    },
-    {
-      "title": "Custom IT Solutions",
-      "features": [
-        "Completely tailored to your needs",
-        "Expert consultancy and implementation"
-      ],
-      "price": "Custom Pricing",
-      "discountedPrice": "Contact for pricing",
-      "tagline": "Turn your vision into reality!"
-    }
-  ]
-  
+export const plans = [
+  {
+    id: 1,
+    title: "Frontend Design",
+    img: 'assets/images/frontend.jpg',
+    plans: [
+      {
+        type: "Basic",
+        price: "₹4,499",
+        features: [
+          "Responsive Design",
+          "HTML5, CSS3, and JavaScript",
+          "Cross-browser Compatibility",
+        ],
+      },
+      {
+        type: "Pro",
+        price: "₹14,499",
+        features: [
+          "Responsive Design",
+          "Custom UI/UX",
+          "SEO Optimization",
+          "Bootstrap and Tailwind CSS",
+        ],
+      },
+      {
+        type: "Enterprise",
+        price: "₹24,499",
+        features: [
+          "Responsive Design",
+          "Custom UI/UX",
+          "SEO Optimization",
+          "React.js for Dynamic Interfaces",
+          "Cross-browser Compatibility",
+          "JSX for Clean Code",
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Backend Design",
+    img: "assets/images/Backend.png",
+    plans: [
+      {
+        type: "Basic",
+        price: "₹4,999",
+        features: [
+          "Database Setup (MongoDB, PostgreSQL, MySQL)",
+          "API Development (RESTful)",
+          "Express.js for Backend Framework",
+        ],
+      },
+      {
+        type: "Pro",
+        price: "₹14,499",
+        features: [
+          "Database Setup",
+          "API Development",
+          "Authentication with Passport.js",
+          "User Authorization",
+          "Middleware Integration",
+        ],
+      },
+      {
+        type: "Enterprise",
+        price: "₹24,499",
+        features: [
+          "Scalable Architecture",
+          "Secure Data Handling",
+          "Middleware Integration",
+          "Database Optimization",
+          "Real-time Updates",
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Full Stack Design",
+    img: 'assets/images/fullstack.jpg',
+    plans: [
+      {
+        type: "Basic",
+        price: "₹11,999",
+        features: [
+          "Frontend: HTML5, CSS3, JavaScript",
+          "Backend: Node.js, Express.js",
+          "Database: MongoDB",
+        ],
+      },
+      {
+        type: "Pro",
+        price: "₹29,999",
+        features: [
+          "Frontend: Responsive Design with React.js",
+          "Backend: Node.js with Express.js",
+          "Database Solutions (MongoDB, PostgreSQL)",
+          "API Integration",
+        ],
+      },
+      {
+        type: "Enterprise",
+        price: "₹49,999",
+        features: [
+          "Custom Frontend UI/UX",
+          "Advanced Backend Architecture",
+          "Database Optimization",
+          "Real-time Updates and WebSocket Integration",
+          "Deployment and Hosting (AWS, Heroku, etc.)",
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Digital Marketing",
+    img: "assets/images/digitalMarketing.png",
+    plans: [
+      {
+        type: "Basic",
+        price: "₹9,999",
+        features: [
+          "Social Media Marketing (Facebook, Instagram)",
+          "SEO Optimization",
+          "Basic Analytics Reporting",
+        ],
+      },
+      {
+        type: "Pro",
+        price: "₹19,999",
+        features: [
+          "Social Media Marketing (LinkedIn, Twitter)",
+          "Paid Search Ads (Google Ads)",
+          "On-page and Off-page SEO",
+          "Content Marketing",
+        ],
+      },
+      {
+        type: "Enterprise",
+        price: "₹29,999",
+        features: [
+          "Comprehensive Digital Marketing Strategy",
+          "Paid Search Ads and Campaign Management",
+          "Advanced Analytics and Reporting",
+          "Branding and Reputation Management",
+        ],
+      },
+    ],
+  },
+];

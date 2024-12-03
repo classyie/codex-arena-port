@@ -1,7 +1,9 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
+import { HashLink } from 'react-router-hash-link';
 
-const PricingPlans = () => {
+const FrontendPP = () => {
+  // const navigate = useNavigate();
   const plans = [
     {
       title: "Web Page Design - Starter Plan",
@@ -33,9 +35,13 @@ const PricingPlans = () => {
     },
   ];
 
+  const handleChoosePlan = () => {
+    navigate("/#ContactUs");
+  };
+
   return (
-    <div className="flex flex-col items-center min-h-screen px-6 py-6 scroll-animate bg-gray-50">
-      <h1 className="text-5xl font-extrabold text-gray-800 mb-10">
+    <div className="flex flex-col items-center h-[80vh] px-6 py-6 scroll-animate bg-gray-50xs:px-10">
+      <h1 className="text-5xl font-extrabold text-gray-800 mb-10 lg:pt-20">
         Our Pricing Plans
       </h1>
       <p className="text-lg text-gray-600 mb-12 max-w-2xl text-center">
@@ -80,9 +86,11 @@ const PricingPlans = () => {
                   ))}
                 </ul>
               </div>
-              <button className="mt-auto w-full bg-indigo-600 text-white py-2 rounded-full font-medium hover:bg-indigo-700 transition-all">
+              <HashLink smooth to="/#ContactUs">
+              <button onClick={handleChoosePlan} className="mt-auto w-full bg-indigo-600 text-white py-2 rounded-full font-medium hover:bg-indigo-700 transition-all">
                 Choose Plan
               </button>
+              </HashLink>
             </div>
           </Tilt>
         ))}
@@ -91,4 +99,4 @@ const PricingPlans = () => {
   );
 };
 
-export default PricingPlans;
+export default FrontendPP;

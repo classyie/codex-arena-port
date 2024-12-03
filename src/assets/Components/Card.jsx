@@ -1,9 +1,24 @@
 import React from "react";
 import { SlPencil } from "react-icons/sl";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Card({ card }) {
+  const navigate = useNavigate();
+
+  // Handle Card Click
+  const handleCardClick = () => {
+    if (card.title === "Frontend Design") {
+      navigate("/frontend");
+    } else if (card.title === "Backend Design") {
+      navigate("/backend");
+    } else if (card.title === "Full Stack Design") {
+      navigate("/fullstack");
+    } else if (card.title === "Digital Marketing") {
+      navigate("/digital");
+    }
+  };
+
   return (
     <motion.div
       className="h-[120vh] w-full sm:w-[80%] md:w-[60%] lg:w-[40%] xl:w-[24vw] rounded-md p-3 bg-[#ffffff] border border-[#2532C0] shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out mx-2 sm:mx-4 mt-14 relative overflow-hidden"
@@ -14,6 +29,7 @@ function Card({ card }) {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
+      onClick={handleCardClick}
     >
       {/* Card Title */}
       <motion.div
@@ -67,9 +83,9 @@ function Card({ card }) {
         className="absolute flex justify-center w-full bottom-6"
         whileHover={{ scale: 1.1 }}
       >
-        <Link to="/plans"><button className="px-4 py-2 text-sm font-semibold text-white transition-colors bg-indigo-500 rounded-md hover:bg-indigo-700">
+        <button className="px-4 py-2 text-sm font-semibold text-white transition-colors bg-indigo-500 rounded-md hover:bg-indigo-700">
           KNOW MORE
-        </button></Link>
+        </button>
       </motion.div>
     </motion.div>
   );
