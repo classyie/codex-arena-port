@@ -23,7 +23,7 @@ export const cards = [
         title: "Backend Design",
         img: "assets/images/Backend.png", // Replace with your image URL
         // price:,
-        price:  "4999-24,499",
+        price:  "4,999-24,499",
         features: [
             "Database Setup (MongoDB, PostgreSQL, MySQL)",
             "API Development (RESTful)",
@@ -44,13 +44,10 @@ export const cards = [
         features: [
             "Frontend Technologies: HTML5, CSS3, JavaScript, React.js, JSX",
             "Responsive Design with Bootstrap and Tailwind CSS",
-            "Custom UI/UX with Interactive Elements",
             "Backend Framework: Node.js with Express.js",
             "Database Solutions: MongoDB, PostgreSQL, MySQL",
-            "API Integration (RESTful APIs)",
             "User Authentication with Passport.js",
-            "Middleware Integration for Security and Session Management",
-            "Real-time Updates and WebSocket Integration",
+            "Real-time Updates, WebSocket Integration and API Integration",
             "Admin Panels and Dashboards",
             "Deployment and Hosting (AWS, Heroku, etc.)"
         ]

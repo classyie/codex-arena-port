@@ -36,7 +36,7 @@ const Banner = () => {
             <font color="orange">DOING</font> NOTHING
           </p>
           <button className="px-6 py-3 text-white transition bg-indigo-500 rounded-lg shadow-lg hover:bg-indigo-700">
-            Visit us
+            <a href="https://www.linkedin.com/in/thepandey/" target="_blank">Visit us</a>
           </button>
         </div>
         <div className="relative flex flex-wrap items-center justify-center px-4 mt-5 space-y-4 text-center text-white">

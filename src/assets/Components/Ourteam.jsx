@@ -52,13 +52,13 @@ const Ourteam = () => {
   return (
     <div className='scroll-animate'>
     <h1
-      className="flex mt-10 items-center justify-center h-12 text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center"
+      className="flex items-center justify-center h-12 mt-10 text-3xl text-center md:text-4xl lg:text-5xl xl:text-6xl"
       style={{ fontFamily: 'Parkinsans, sans-serif' }}
     >
       Our Team Members
     </h1>
 
-    <div className="grid grid-cols-1 gap-6 mt-10 mb-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="flex flex-wrap justify-center p-1">
       
       {users.map((user, index) => (
         <Teammmember
