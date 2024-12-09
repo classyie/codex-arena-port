@@ -2,10 +2,10 @@ import React from 'react';
 
 const Teammmember = ({ profileImage, name, role, tags, profileLink }) => {
   return (
-    <div className="max-w-sm w-[350px] mx-auto bg-white rounded-lg shadow-lg transition-transform duration-300 ease-out hover:transform hover:scale-105 hover:rotate-[2deg] ">
+    <div className="relative flex-shrink-0 max-w-sm m-6 overflow-hidden bg-white rounded-lg shadow-lg ">
       <div className="relative">
         <video
-          className="object-cover w-full h-48 transition-transform duration-300 ease-out rounded-t-lg hover:scale-110"
+          className="object-cover w-full transition-transform duration-300 ease-out rounded-t-lg h-52 "
           src={profileImage}
           autoPlay
           loop
@@ -28,7 +28,7 @@ const Teammmember = ({ profileImage, name, role, tags, profileLink }) => {
         ))}
       </div>
       <div className="px-6 py-4">
-        <a href={profileLink} className="text-blue-500 hover:underline">
+        <a href={profileLink} target='_blank' className="text-blue-500 hover:underline">
           View Profile
         </a>
       </div>

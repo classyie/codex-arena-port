@@ -14,7 +14,7 @@
   
   /* Reusable class for the animation */
   .appear-animation {
-    animation: appear 2s ease-out forwards;
+    animation: appear 0.5s ease-out forwards;
     opacity: 0; /* Ensure the element is hidden until animated */
   }
   
