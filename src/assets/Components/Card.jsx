@@ -1,5 +1,4 @@
 import React from "react";
-import { SlPencil } from "react-icons/sl";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -21,58 +20,56 @@ function Card({ card }) {
 
   return (
     <motion.div
-      className="h-[139vh] customnew:h-[120vh] custom-range:h-[120vh] customnew1:h-[140vh] min-hei2:h-[135vh] min-hei1:h-[90vh] min-hei5:h-[70vh] min-hei4:h-[70vh] min-hei3:h-[73vh] custom-1024-600:h-[110vh] custom-1280-800:h-[120vh] xxs:h-auto custom-912:h-[75vh] lg-custom:h-[100vh]     xs:h-auto custom:h-[92vh] md:h-[95vh] lg:h-[120vh]    w-full  xs:px-3 md:w-[60%] lg:w-[40%] xl:w-[24vw] rounded-md p-3 bg-[#ffffff] border border-[#2532C0] shadow-lg hover:shadow-2xl desktop:h-[125vh] transition-shadow duration-300 laptop:h-[120vh] tablet:h-[90vh] ease-in-out mx-2 sm:mx-4 mt-14 relative overflow-hidden"
+      className="flex flex-col w-full sm:w-[90%] md:w-[60%] lg:w-[40%] xl:w-[30%] bg-white border border-[#D1D5DB] shadow-lg hover:shadow-2xl rounded-xl p-6 mx-2 sm:mx-4 mt-8 relative overflow-hidden transition-transform transform hover:scale-105 h-full"
       whileHover={{
-        scale: 1.05,
-        boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+        scale: 1.05, // Slightly larger scale effect on hover
+        boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.1)",
       }}
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      
+      transition={{
+        duration: 0.1, // Faster transition duration for hover effect
+        ease: "easeOut", // Ease-out for smoother effect
+      }}
     >
       {/* Card Title */}
       <motion.div
-        className="w-[83%] xs:w-[72vw] lg:w-[75w]  xxs:w-[68vw] xxs:text-2xl md:w-[100%]  mx-auto py-2 px-4 rounded-md text-black flex justify-center text-3xl sm:text-2xl md:text-3xl font-extrabold break-words whitespace-normal"
-        whileHover={{ scale: 1.1 }}
-        key={card.id}
+        className="text-center text-3xl font-extrabold text-gray-800 pb-4"
+        whileHover={{ scale: 1.1 }} // Slightly faster hover effect on title
+        transition={{ duration: 0.3 }} // Fast hover transition on title
       >
         {card.title}
       </motion.div>
 
       {/* Image Section */}
       <motion.div
-        className="flex items-center justify-center flex-grow w-full h-auto p-3 mt-3"
-        whileHover={{ scale: 1.1 }}
-        transition={{ duration: 0.3 }}
+        className="flex justify-center w-full mb-4"
+        whileHover={{ scale: 1.05 }} // Slightly faster scaling on image hover
+        transition={{ duration: 0.3 }} // Faster transition duration on image hover
       >
         <img
-          className="max-w-[80%] max-h-[30vh] object-contain rounded-md"
+          className="max-w-[80%] max-h-[200px] object-contain rounded-lg shadow-md"
           src={card.img}
-          alt=""
+          alt={card.title}
         />
       </motion.div>
 
       {/* Price Section */}
-      <div className="grid justify-center p-2 price">
-        <h1 className="text-3xl xxs:text-2xl font-bold leading-none text-[#161ab2]">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold text-indigo-600">
           ₹ {card.price}
         </h1>
       </div>
 
       {/* Features Section */}
-      <div className="grid justify-center mt-4 text-lg font-semibold ">
-        Features Includes
+      <div className="mt-6 text-center text-lg font-semibold text-gray-700">
+        Features Include:
       </div>
-
-      <div className="mt-2 xxs:p-1 xxs:w-full">
-        <ul className="p-4 ml-2 space-y-3 font-sans text-sm list-none custom-list text-black-700">
-          {card.features.map((data) => (
-            <li
-              className="flex items-center whitespace-normal text-ellipsis"
-              key={data}
-            >
-             <font size="7px" className="mr-1">🖉</font> {data}
+      <div className="mt-4">
+        <ul className="space-y-3 text-sm text-gray-600">
+          {card.features.map((feature, index) => (
+            <li className="flex items-center" key={index}>
+              <span className="text-indigo-500 mr-2">🖉</span> {feature}
             </li>
           ))}
         </ul>
@@ -80,11 +77,15 @@ function Card({ card }) {
 
       {/* Button Section */}
       <motion.div
-        className="grid justify-center w-full lg:mt-5 xs:mt-10 md:mt-5 xxs:mt-5 xxs:mb-2 b-0 lg:absolute md:absolute bottom-6"
-        whileHover={{ scale: 1.1 }}
+        className="flex justify-center mt-6 flex-grow"
+        whileHover={{ scale: 1.05 }} // Slightly faster button hover
+        transition={{ duration: 0.3 }} // Faster button hover transition
       >
-        <button onClick={handleCardClick} className="px-4 py-2 text-sm font-semibold text-white transition-colors bg-indigo-500 rounded-md xs:mr-0 xxs:mr-0 md:mr-0 lg:mr-0 hover:bg-indigo-700">
-          <a >KNOW MORE</a>
+        <button
+          onClick={handleCardClick}
+          className="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md transition-all duration-300 hover:bg-indigo-700 hover:shadow-xl"
+        >
+          Know More
         </button>
       </motion.div>
     </motion.div>

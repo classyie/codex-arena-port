@@ -32,7 +32,8 @@ export const cards = [
             "Middleware Integration",
             "User Authorization",
             "Scalable Architecture",
-            "Secure Data Handling"
+            "Secure Data Handling",
+            "Error handling & Logging",
         ]
     },
     {
@@ -49,7 +50,8 @@ export const cards = [
             "User Authentication with Passport.js",
             "Real-time Updates, WebSocket Integration and API Integration",
             "Admin Panels and Dashboards",
-            "Deployment and Hosting (AWS, Heroku, etc.)"
+            "Deployment and Hosting (AWS, Hostinger, etc.)",
+            "Version Control and Collaboration with Git and GitHub"
         ]
     },
     {

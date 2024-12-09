@@ -1,14 +1,19 @@
 import { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link"; // Import HashLink
 import logo from "../imgs/logo.svg";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isWideScreen, setIsWideScreen] = useState(true); // State to track window size
+  const [activeHash, setActiveHash] = useState(""); // Track active HashLink
+  const location = useLocation(); // Get current location for HashLink active detection
 
-  const handleLinkClick = () => {
-    setIsMenuOpen(false); // Close the mobile menu
+  const handleLinkClick = (path) => {
+    setIsMenuOpen(false); 
+    if (path.startsWith("#")) {
+      setActiveHash(path);
+    }
   };
 
   const navItems = [
@@ -24,16 +29,15 @@ function Navbar() {
     const handleResize = () => {
       setIsWideScreen(window.innerWidth > 764); // Check if window width is more than 764px
     };
-
-    // Check on initial render
     handleResize();
-
-    // Add event listener for resize
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    setActiveHash(location.hash || "");
+  }, [location]);
 
   return (
     <nav
@@ -90,18 +94,22 @@ function Navbar() {
                   <HashLink
                     smooth
                     to={item.path}
-                    onClick={handleLinkClick}
-                    className="block px-3 py-2 text-black rounded hover:bg-gray-200"
+                    onClick={() => handleLinkClick(item.path.split("#")[1])}
+                    className={`block px-3 py-2 text-black rounded ${
+                      activeHash === item.path.split("#")[1]
+                        ? "text-blue-700 font-bold"
+                        : "hover:bg-gray-200"
+                    }`}
                   >
                     {item.label}
                   </HashLink>
                 ) : (
                   <NavLink
                     to={item.path}
-                    onClick={handleLinkClick}
+                    onClick={() => handleLinkClick("")}
                     className={({ isActive }) =>
                       `block px-3 py-2 text-black rounded ${
-                        isActive ? "bg-gray-300 font-bold" : "hover:bg-gray-200"
+                        isActive ? "text-blue-700 font-bold" : "hover:bg-gray-200"
                       }`
                     }
                   >
@@ -123,13 +131,19 @@ function Navbar() {
                     <HashLink
                       smooth
                       to={item.path}
-                      className="px-3 py-2 text-black rounded hover:bg-gray-200"
+                      onClick={() => handleLinkClick(item.path.split("#")[1])}
+                      className={`px-3 py-2 text-black rounded ${
+                        activeHash === item.path.split("#")[1]
+                          ? "text-blue-700 font-bold"
+                          : "hover:bg-gray-200"
+                      }`}
                     >
                       {item.label}
                     </HashLink>
                   ) : (
                     <NavLink
                       to={item.path}
+                      onClick={() => handleLinkClick("")}
                       className={({ isActive }) =>
                         `px-3 py-2 text-black rounded ${
                           isActive
